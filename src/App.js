@@ -11,6 +11,7 @@ function App() {
     // タスクを追加
     // console.log(todoNameRef.current.value);
     const text = todoNameRef.current.value;
+    if (text === '') return;
     setTodo((prevTodo) => {
       return [...prevTodo, {
         id: uuidv4(),
